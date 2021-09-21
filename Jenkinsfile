@@ -6,9 +6,7 @@ pipeline {
     //     }
     // }
     agent { label 'master' }
-    enviroment {
-
-    }
+    
     stages {
         stage('Build') { 
             steps {
