@@ -17,9 +17,9 @@ pipeline {
         stage('Deploy'){
             steps {
                 //https://github.com/firebase/firebase-tools/issues/77#issuecomment-149374516
-                sh "firebase login:ci" 
+                sh "firebase login --interactive" 
                 // sh "firebase login:ci"
-                sh "firebase deploy --token ${env.FIREBASE_TOKEN}"
+                sh "firebase deploy"
             }
         }
     }
