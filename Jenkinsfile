@@ -6,6 +6,10 @@ pipeline {
     //     }
     // }
     agent { label 'master' }
+
+    environment {
+        GOOGLE_APPLICATION_CREDENTIALS = '217040994399-3v4b6e98l87ciquo6hobebqidqkm7kma.apps.googleusercontent.com'
+    }
     
     stages {
         stage('Build') { 
