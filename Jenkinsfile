@@ -6,6 +6,9 @@ pipeline {
     //     }
     // }
     agent { label 'master' }
+    enviroment {
+
+    }
     stages {
         stage('Build') { 
             steps {
@@ -15,6 +18,7 @@ pipeline {
         }
         stage('Deploy'){
             steps {
+                sh "firebase login:ci"
                 sh "firebase deploy"
             }
         }
