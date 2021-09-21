@@ -9,6 +9,7 @@ pipeline {
 
     environment {
         GOOGLE_APPLICATION_CREDENTIALS = '217040994399-3v4b6e98l87ciquo6hobebqidqkm7kma.apps.googleusercontent.com'
+        FIREBASE_TOKEN = "1//0emvlfUV5ufspCgYIARAAGA4SNwF-L9IrWYFNmDhsOqz8JO1EkolzZUjPi-Dhd0SKm4FyI-QKzn7bL3HJ6qHOORRmEun6iNFEOio"
     }
     
     stages {
@@ -20,10 +21,7 @@ pipeline {
         }
         stage('Deploy'){
             steps {
-                //https://github.com/firebase/firebase-tools/issues/77#issuecomment-149374516
-                sh "firebase login --interactive" 
-                // sh "firebase login:ci"
-                sh "firebase deploy"
+                sh "firebase deploy --token ${evn.FIREBASE_TOKEN}"
             }
         }
     }
