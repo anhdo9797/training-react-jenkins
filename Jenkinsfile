@@ -17,7 +17,7 @@ pipeline {
         stage('Deploy'){
             steps {
                 sh "firebase login --interactive"
-                sh "firebase login:ci"
+                // sh "firebase login:ci"
                 sh "firebase deploy"
             }
         }
