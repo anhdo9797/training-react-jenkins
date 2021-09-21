@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Deploy'){
             steps {
-                sh "firebase deploy --token ${evn.FIREBASE_TOKEN}"
+                sh "firebase deploy --token ${env.FIREBASE_TOKEN}"
             }
         }
     }
