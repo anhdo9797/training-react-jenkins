@@ -9,7 +9,13 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'npm install' 
+                sh 'npm install'
+                sh 'npm run build'
+            }
+        }
+        stage('Deploy'){
+            steps {
+                sh "firebase deploy"
             }
         }
     }
