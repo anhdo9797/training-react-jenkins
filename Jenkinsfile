@@ -8,7 +8,7 @@ pipeline {
     agent { label 'master' }
 
     environment {
-        GOOGLE_APPLICATION_CREDENTIALS = '217040994399-3v4b6e98l87ciquo6hobebqidqkm7kma.apps.googleusercontent.com'
+        //login firebase: sudo firebase login:ci --no-localhost --debug
         FIREBASE_TOKEN = "1//0emvlfUV5ufspCgYIARAAGA4SNwF-L9IrWYFNmDhsOqz8JO1EkolzZUjPi-Dhd0SKm4FyI-QKzn7bL3HJ6qHOORRmEun6iNFEOio"
     }
     
