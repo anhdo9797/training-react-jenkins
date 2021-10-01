@@ -16,6 +16,7 @@ pipeline {
         }
         stage('Deploy'){
             steps {
+                echo "Deploy to firebase"
                 sh "firebase deploy --token ${env.FIREBASE_TOKEN}"
             }
         }
